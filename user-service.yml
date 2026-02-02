@@ -1,8 +1,7 @@
 server:
-  forward-headers-strategy: framework
-  tomcat:   
-    remote-ip-header: x-forwarded-for
-    protocol-header: x-forwarded-proto
+  forward-headers-strategy: framework  
+  tomcat:
+    use-relative-redirects: true
   
 spring:
   datasource:
@@ -42,5 +41,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true 
+
 
 
