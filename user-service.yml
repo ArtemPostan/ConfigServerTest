@@ -1,3 +1,6 @@
+server:
+  forward-headers-strategy: framework
+  
 spring:
   datasource:
 
@@ -36,3 +39,4 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true 
+
