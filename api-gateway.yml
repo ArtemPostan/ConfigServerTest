@@ -18,8 +18,5 @@ spring:
               predicates:
                 - Path=/api/users/**
               filters:
-                - name: CircuitBreaker
-                  args:
-                    name: userServiceCB
-                    fallbackUri: forward:/fallback/users
+                - CircuitBreaker=userServiceCB,forward:/fallback/users
            
